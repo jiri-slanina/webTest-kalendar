@@ -5,95 +5,130 @@
 }
 
 body{
+    width: 99vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* obsah HLAVICKY */
-header{
-    width: 100%;
+nav{
+    width: 80vw;
     margin: 0 auto;
-    text-align: center;
-    background-color: #4d4d4d;
+    
 }
 
-header h1{
-    color: #fff;
-    font-size: 2.2em;
-    letter-spacing: 5px;
-    text-decoration: underline 3px black;
-    text-transform: uppercase;
-    line-height: 2em;
-}
-/* konec obsahu HLAVICKY */
-
-/* začátek obsahu MAIN  */
-main{
-    width: 90%;
-    padding: 2vw;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 2vw;
-    background-color: #4d4d4d;
-    border-radius: 2vw;
-}
-
-.kalendar{
+nav ul{
+    height: clamp(25px, 5vw, 45px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: #343a40;
+    border-radius: 0px 0px 10px 10px;
 }
 
-main button{
-    padding: 1vw 3vw;
-    margin: 1vw auto;
-    background-color: #cc0000;
-    font-size: 1.2em;
-    border-radius: 2vw;
+nav ul li a{
     color: #fff;
-    box-shadow: 8px 5px 5px 5px #000;
-    transition: background-color 0.5s, color 0.5s;
+    text-decoration: none;
+    line-height: 2vw;
+    font-size: clamp(18, 1.8vw, 25px);
+}
+
+nav ul li a:hover{
+    text-decoration: underline solid 2px;
+}
+
+header input[type=search]{
+    position: absolute;
+    top: 1vw;
+    width: 9vw;
+}
+/* KONEC OBSAHU HLAVICKY */
+
+.celyObsah{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    position: relative;
+    top: 5vw;
+    background-color: #343a40;
+    height: 38vw;
+}
+
+/* SEKCE 1 */
+
+.section1{
+    text-align: center;
+}
+
+.section1 img{
+    width: 22vw;
+}
+
+.section1 h3{
+    margin-top: 1.5vw;
+    font-size: clamp(18px, 2.5vw, 35px);
+    color: aliceblue;
+}
+
+
+.section1 p{
+    text-align: center;
+    margin: 0 auto;
+    width: 25vw;
+    font-size: clamp(12px, 1.5vw, 25px);
+    color: aliceblue;
+}
+
+/* SEKCE 2 */
+
+.section2{
+    text-align: center;
+}
+
+.section2 img{
+    width: 23vw;
+}
+
+.section2 h3{
+    font-size: clamp(18px, 2.5vw, 35px);
+    color: aliceblue;
+}
+
+
+.section2 p{
+    width: 25vw;
+    text-align: center;
+    margin: 0 auto;
+    font-size: clamp(12px, 1.5vw, 25px);
+    color: aliceblue;
+}
+
+/* SEKCE 3 */
+
+.section3{
+    text-align: center;
+}
+
+.section3 img{
+    width: 29vw;
+}
+
+.section3 h3{
+    font-size: clamp(18px, 2.5vw, 35px);
+    color: aliceblue;
+}
+
+
+.section3 p{
+    text-align: center;
+    margin: 0 auto;
+    width: 25vw;
+    font-size: clamp(12px, 1.5vw, 25px);
+    color: aliceblue;
+}
+
+button{
+    margin-top: 2vw;
+    padding: 0.3vw 0.7vw;
+    border-radius: 8px;
     cursor: pointer;
 }
-
-main button:hover{
-    background-color: #fff;
-    color: #000;
-}
-
-#skrytBtn{
-    display: none;
-    margin-top: 5vw;
-    background-color: #000;
-    color: #fff;
-    padding: 7px;
-}
-
-#skrytBtn:hover{
-    background-color: #ff4d4d;
-    color: #000;
-}
-
-main p{
-    font-size: 1.7rem;
-    color: #fff;
-}
-
-#pondeli1{
-    background-color: #000;
-}
-
-#utery1{
-    background-color: #000;
-}
-
-#streda1{
-    background-color: #000;
-}
-
-#ctvrtek1{
-    background-color: #000;
-}
-
-#patek1{
-    background-color: #000;
-}
-/* konec obsahu MAIN */

@@ -4,35 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styly.css">
-    <title>test</title>
+    <link rel="icon" href="favicon/favicon-32x32.png" type="ico">
+    <title>Apple.JS</title>
 </head>
 <body>
-  <header>
-    <h1>Kalendář</h1>
-  </header>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">iMac</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Domácnost</a></li>
+                <li><a href="#">Podpora</a></li>
+            </ul>
+        </nav>
+        <input type="search" placeholder="Hledat:">
+    </header>
+
+    <main>
+        <div class="celyObsah">
+            <div class="section1">
+                <img src="img/appleIphone12.png" alt="">
+                <h3>iPhone 12</h3>
+                <p>A14 Bionic, 4GB RAM, 64 /128 / 256GB, </p>
+                <button>Koupit</button>
+            </div>
+            <div class="section2">
+                <img src="img/mac.png" alt="">
+                <h3>Mac</h3>
+                <p>M1 nebo M3 čip, 8 - 24GB RAM, SSD(256GB až 2TB)</p>
+                <button>Koupit</button>
+            </div>
+            <div class="section3">
+                <img src="img/appleWatch.png" alt="">
+                <h3>iWatch</h3>
+                <p>Series 9, SE, Ultra, kroky, tep, EKG, spánek, tréninky </p>
+                <button>Koupit</button>
+            </div>
+        </div>
+
+    </main>
 
 
-  <main>
-    <div class="kalendar">
-      <button onclick="pondeli()">Pondělí</button>
-        <p id="pondeli1"></p> 
-      <button onclick="utery()">Úterý</button> 
-        <p id="utery1"></p>
-      <button onclick="streda()">Středa</button>
-        <p id="streda1"></p>
-      <button onclick="ctvrtek()">Čtvrtek</button> 
-        <p id="ctvrtek1"></p>
-      <button onclick="patek()">Pátek</button> 
-        <p id="patek1"></p>
-      <button onclick="smazatObsah()" id="skrytBtn" style="display: none;">Smazat obsah</button>
-    </div>
-  </main>
+    <footer>
+
+    </footer>
 
 
-  <footer>
-
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
