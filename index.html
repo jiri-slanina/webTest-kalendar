@@ -4,54 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styly.css">
-    <link rel="icon" href="favicon/favicon-32x32.png" type="ico">
-    <title>Apple.JS</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <title>Apple - testWeb</title>
 </head>
 <body>
-
+    
     <header>
         <nav>
-            <ul>
-                <li><a href="#">iPhone</a></li>
-                <li><a href="#">iMac</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Domácnost</a></li>
-                <li><a href="#">Podpora</a></li>
+            <ul class="nav-bar">
+                <li><a href="iPhone.html">iPhone</a></li>
+                <li><a href="iWatch.html">iWatch</a></li>
+                <li><a href="iMac.html">iMac</a></li>
+                <li><a href="TV.html">TV</a></li>
+                <li><a href="podpora.html">Podpora</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="#"><img src="img/kosik.png" alt=""></a></li>
             </ul>
         </nav>
-        <input type="search" placeholder="Hledat:">
+
     </header>
-
+    
     <main>
-        <div class="celyObsah">
-            <div class="section1">
-                <img src="img/appleIphone12.png" alt="">
-                <h3>iPhone 12</h3>
-                <p>A14 Bionic, 4GB RAM, 64 /128 / 256GB, </p>
-                <button>Koupit</button>
+        <h2 class="odberNovinek">Pro odebírání novinek, zadejte Váš e-mail.:</h2><br>
+        <form class="mainFormular" action="">
+            <input type="email" placeholder="E-mail">
+            <input type="submit">
+        </form>
+        <div class="iphone11">
+            <div id="loga">
+                <img src="img/apple_logohl2.gif" alt="">
+                <h1 class="nadpisWebu">Vítejte ve světě Apple</h1>
+                <img src="img/apple_logohl1.gif" alt="">
             </div>
-            <div class="section2">
-                <img src="img/mac.png" alt="">
-                <h3>Mac</h3>
-                <p>M1 nebo M3 čip, 8 - 24GB RAM, SSD(256GB až 2TB)</p>
-                <button>Koupit</button>
-            </div>
-            <div class="section3">
-                <img src="img/appleWatch.png" alt="">
-                <h3>iWatch</h3>
-                <p>Series 9, SE, Ultra, kroky, tep, EKG, spánek, tréninky </p>
-                <button>Koupit</button>
-            </div>
-        </div>
+            <img src="img/iphone11.png" alt="">
+            <h2>iPhone 11</h2>
+            <p>Elegantní design, 6,1″ Liquid Retina HD displej, výkonný čip A13 Bionic</p>
+            <button onclick="infoIphone11()">Parametry:</button>
+            <p id="infoIphone11"></p>
+            <button id="skrytBtnIphone" onclick="smazInfo()" style="display: none;">Skrýt parametry</button>
+        </div> <br>
+        <div class="iOS">
 
+        </div>
+        <div class="iMac">
+            <img src="img/mac.png" alt="">
+            <h2>iMac</h2>
+            <p>Výkonný all-in-one počítač s tenkým designem, 24″ Retina displejem, čipem Apple M1 nebo M3 a ideální volbou pro kreativní práci i každodenní použití.</p>
+            <button onclick="iMacInfo()">Parametry:</button>
+            <p id="infoIMac"></p>
+            <button id="skrytBtnIMac" style="display: none;" onclick="skrytBtnIMac()">Skrýt parametry</button>
+        </div>
+        <div class="iOsBuddy">
+            
+        </div>
+        <div class="iWatch">
+            <img src="img/appleWatch.png" alt="">
+            <h2>Apple Watch SE</h2>
+            <p>Chytré hodinky s elegantním designem, pokročilými funkcemi pro zdraví a kondici, notifikacemi z iPhonu a skvělým výkonem díky čipu Apple S8 – ideální volba pro každodenní použití i aktivní životní styl.</p>
+            <button onclick="iWatchInfo()">Parametry</button>
+            <p id="infoIWatch"></p>
+            <button id="skrytBtnWatch" style="display: none;" onclick="smazIWatch()">Skrýt parametry</button>
+        </div>
     </main>
 
-
     <footer>
-
+        <p>Copyright &copy; Apple - testWeb - 2025 /</p>
     </footer>
-
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -5,130 +5,410 @@
 }
 
 body{
-    width: 99vw;
+    width: 100%;
+    margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-nav{
-    width: 80vw;
-    margin: 0 auto;
-    
-}
 
-nav ul{
-    height: clamp(25px, 5vw, 45px);
+
+.nav-bar{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
-    background-color: #343a40;
-    border-radius: 0px 0px 10px 10px;
+    background-color: #4b5054;
 }
 
-nav ul li a{
+header nav ul li a img{
+    width: 1.5vw;
+    position: absolute;    
+    top: 0.2vw;
+}
+@media(max-width: 420px){
+    header nav ul li a img{
+        width: 4vw;
+    }
+}
+header nav ul li a img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.4s ease;
+}
+
+/* Když najedeš myší */
+header nav ul li a img:hover::after {
+    width: 100%;
+}
+
+
+
+header nav ul li a {
+    position: relative;
+    font-size: clamp(16px, 1.2vw, 28px);
     color: #fff;
     text-decoration: none;
-    line-height: 2vw;
-    font-size: clamp(18, 1.8vw, 25px);
+    line-height: 6vh;
 }
 
-nav ul li a:hover{
-    text-decoration: underline solid 2px;
-}
 
-header input[type=search]{
+header nav ul li a::after {
+    content: '';
     position: absolute;
-    top: 1vw;
-    width: 9vw;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.4s ease;
 }
-/* KONEC OBSAHU HLAVICKY */
 
-.celyObsah{
+/* Když najedeš myší */
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* KONEC HLAVICKY */
+
+main{
+    background-image: linear-gradient(rgba(0,0,0.5,0.9),rgba(0,0,0,0.7)), url(img/13-iPhones-15.jpg);
+    min-height: 100vh;
+    background-size: 100%;
+    margin: 0 auto;
+    width: 92%;
+}
+
+/* E-MAIL PRO ODBER */
+.odberNovinek{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.784), orange, yellow, rgb(8, 191, 8), rgb(255, 0, 0), rgb(30, 236, 33), rgb(228, 40, 228));
+    background-clip: text;           /* standardní vlastnost */
+    -webkit-background-clip: text;   /* verze pro Chrome, Safari */
+    color: transparent;              /* standardní způsob */
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(16px, 2vw, 30px);
+    text-align: center;
+}
+
+.mainFormular{
+    text-align: center;
+}
+
+main input[type=email]{
+    width: 45vw;
+    padding: 1.2vw 1.8vw;
+    border-radius: 2vw;
+}
+
+main input[type=submit]{
+    width: 20vw;
+    padding: 1.2vw 2vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: #1b98e0;
+    color: #fff;
+}
+
+main input[type=submit]:hover{
+    background-color: #1b98e084;
+    color: #fff;
+}
+/* KONEC E-MAIL PRO ODBER */
+
+.nadpisWebu{
+    font-size: clamp(28px, 2.5vw, 48px);
+    background: linear-gradient(to left, rgba(17, 219, 14, 0.784), orange, yellow, rgb(22, 89, 246), rgb(255, 0, 0), rgb(30, 236, 33), rgb(228, 40, 228));
+    background-clip: text;           /* standardní vlastnost */
+    -webkit-background-clip: text;   /* verze pro Chrome, Safari */
+    color: transparent;              /* standardní způsob */
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+    letter-spacing: 0.6vw;
+    word-spacing: 1.2vw;
+}
+
+
+/* OBSAH IPHONE */
+.iphone11{
+    width: 95%;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+}
+
+#loga{
     display: flex;
     justify-content: space-around;
-    align-self: center;
-    position: relative;
-    top: 5vw;
-    background-color: #343a40;
-    height: 38vw;
 }
 
-/* SEKCE 1 */
-
-.section1{
-    text-align: center;
+#loga h1{
+    font-size: clamp(18px, 2.5vw, 45px);
 }
 
-.section1 img{
-    width: 22vw;
+#loga img{
+    width: 20vw;
+    border-radius: 5vw;
 }
 
-.section1 h3{
-    margin-top: 1.5vw;
-    font-size: clamp(18px, 2.5vw, 35px);
-    color: aliceblue;
+@media(min-width: 350px) {
+    #loga img{
+        width: 15vw;
+    }
+}
+
+.iphone11 img{
+    width: 30vw;
+}
+@media (max-width: 430px) {
+    .iphone11 img {
+        width: 40vw;
+    }
+}
+
+.iphone11 h2{
+    color: #1b98e0;
+    font-size: clamp(30px, 2vw, 42px);
+    letter-spacing: 0.5vw;
+    text-decoration: underline;
 }
 
 
-.section1 p{
-    text-align: center;
+.iphone11 p{
     margin: 0 auto;
-    width: 25vw;
-    font-size: clamp(12px, 1.5vw, 25px);
-    color: aliceblue;
-}
-
-/* SEKCE 2 */
-
-.section2{
+    padding: 5px 8px;
+    color: #fff;
+    font-size: clamp(15px, 1.5vw, 23px);
+    letter-spacing: 0.3vw;
     text-align: center;
 }
 
-.section2 img{
-    width: 23vw;
+#infoIphone11{
+    margin: 1.5vw auto;
+    color: #fff;
+    font-size: clamp(12px, 1.8vw, 25px);
 }
 
-.section2 h3{
-    font-size: clamp(18px, 2.5vw, 35px);
-    color: aliceblue;
+#infoIphone11 span{
+    color: #1b98e0;
+    font-size: clamp(13px, 1.9vw, 30px);
 }
 
-
-.section2 p{
-    width: 25vw;
-    text-align: center;
-    margin: 0 auto;
-    font-size: clamp(12px, 1.5vw, 25px);
-    color: aliceblue;
-}
-
-/* SEKCE 3 */
-
-.section3{
-    text-align: center;
-}
-
-.section3 img{
-    width: 29vw;
-}
-
-.section3 h3{
-    font-size: clamp(18px, 2.5vw, 35px);
-    color: aliceblue;
-}
-
-
-.section3 p{
-    text-align: center;
-    margin: 0 auto;
-    width: 25vw;
-    font-size: clamp(12px, 1.5vw, 25px);
-    color: aliceblue;
-}
-
-button{
-    margin-top: 2vw;
-    padding: 0.3vw 0.7vw;
+.iphone11 button{
+    padding: 1vh 2vh;
     border-radius: 8px;
+    background-color: #1b98e0;
+    color: #fff;
+    border-color: #fff;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
     cursor: pointer;
+}
+
+.iphone11 button:hover{
+    background-color: #fff;
+    color: #1b98e0;
+    border-color: #1b98e0;
+}
+
+#skrytBtnIphone{
+    display: inline-block;
+    margin: 2vw;
+}
+/* OBSAH IPHONE */
+/* OBSAH IMAC */
+
+.iMac{
+    position: relative;
+    margin: 10vw auto 1vw auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/pozadiImacGIF.gif);
+    background-size: cover;
+    min-height: auto;
+    text-align: center;
+}
+@media (max-width: 430px) {
+    .iMac {
+        margin-top: 18vw;
+    }
+}
+
+.iMac img{
+    width: 45vw;
+}
+@media (max-width: 430px) {
+    .iMac img {
+        width: 50vw;
+    }
+}
+
+.iMac h2{
+    color: #1b98e0;
+    text-decoration: underline;
+    font-size: clamp(30px, 2vw, 42px);
+    letter-spacing: 5px;
+    position: relative;
+    top: 2vw;
+}
+
+.iMac p{
+    position: relative;
+    top: 2vw;
+    color: #fff;
+    font-size: clamp(15px, 1.5vw, 23px);
+    margin-bottom:2.5vw;
+}
+
+.iMac button{
+    padding: 1vh 2vh;
+    border-radius: 8px;
+    background-color: #1b98e0;
+    color: #fff;
+    border-color: #fff;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+    cursor: pointer;
+}
+
+.iMac button:hover{
+    background-color: #fff;
+    color: #1b98e0;
+    border-color: #1b98e0;
+}
+
+#infoIMac{
+    width: 90vw;
+    text-align: center;
+    margin: 2vw auto;
+    color: #fff;
+    font-size: clamp(12px, 1.8vw, 25px);
+}
+
+#infoIMac span{
+    color: #1b98e0;
+}
+
+#skrytBtnMAc{
+    position: relative;
+    top: 30vw;
+    display: inline-block;
+}
+
+.kratkyText{
+    background-image: url(img/GIFsynchronizace.gif);
+    height: 60vh;
+}
+
+.iOS{
+    position: relative;
+    top: 8vw;
+    background-image: url(img/GIFsynchronizace.gif);
+    height: 50vh;
+    box-shadow: 15px 0px 15px 0px #fff;
+}
+.iOS img{
+    width: 60vw;
+}
+@media (max-width: 430px) {
+    .iphone11 img {
+        width: 40vw;
+    }
+}
+
+/* OBSAH APPLE WATCH */
+
+.iWatch{
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/novyGIFiWatch.gif);
+    background-size: 100%;
+    height: auto;
+    margin-top: 5vw;
+}
+
+.iWatch img {
+    width: 45vw;
+}
+@media (max-width: 430px) {
+    .iWatch img {
+        width: 50vw;
+    }
+}
+
+.iWatch h2{
+    font-size: clamp(30px, 2vw, 42px);
+    color: #1b98e0;
+    text-decoration: underline;
+}
+
+.iWatch p{
+    font-size: clamp(15px, 1.5vw, 23px);
+    color: white;
+}
+
+.iWatch button{
+    padding: 1vh 2vh;
+    border-radius: 8px;
+    background-color: #1b98e0;
+    color: #fff;
+    border-color: #fff;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+    cursor: pointer;
+}
+
+.iWatch button:hover{
+    background-color: #fff;
+    color: #1b98e0;
+    border-color: #1b98e0;
+}
+
+.iWatch p {
+    position: relative;
+    top: 2vw;
+    color: #fff;
+    font-size: clamp(15px, 1.5vw, 23px);
+    margin-bottom:2.5vw;
+}
+
+#infoIWatch{
+    width: 90vw;
+    text-align: center;
+    margin: 2vw auto;
+    color: #fff;
+    font-size: clamp(12px, 1.8vw, 25px);
+}
+
+#infoIWatch span{
+    color: #1b98e0;
+}
+
+.skrytBtnWatch{
+    display: inline-block;
+}
+
+.iOsBuddy{
+    background-image: url(img/appleBuddy.gif);
+    height: auto;
+    height: 40vh;
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+    box-shadow: 15px 0px 15px 0px #fff;
+}
+
+
+.fade-in{
+    opacity: 1;
+    transition:  opacity 1s;
+}
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+footer{
+    background-color: #4b5054;
+    color: #ffffff91;
+    text-align: center;
 }
